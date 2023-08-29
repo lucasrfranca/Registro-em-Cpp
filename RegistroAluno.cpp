@@ -11,6 +11,8 @@ struct aluno {
 
 main() {
 	
+	setlocale(LC_ALL, "Portuguese");
+	
 	const int TAM_MAX_VETOR = 3; int i;
     float somaNotasTurmaA = 0, somaNotasTurmaB = 0;
     int countTurmaA = 0, countTurmaB = 0;
@@ -19,7 +21,7 @@ main() {
 	
 	for (i=0; i<TAM_MAX_VETOR; i++) {
 		
-		cout << "\nDigite a matricula do " << i+1 << "o aluno: ";
+		cout << "\nDigite a matrícula do " << i+1 << "o aluno: ";
 	    cin >> alunos[i].matricula;
 	
      	cout << "Digite a nota do " << i+1 << "o aluno: ";
@@ -47,7 +49,7 @@ main() {
 	
 	for (i=0; i<TAM_MAX_VETOR; i++) {
 		
-		cout << "\nMatricula = " << alunos[i].matricula;
+		cout << "\nMatrícula = " << alunos[i].matricula;
 	    cout << "\nNota =  " << alunos[i].nota;
 	    cout << "\nTurma =  " << alunos[i].turma << "\n";
 		
@@ -59,16 +61,16 @@ main() {
 		
 		if ((alunos[i].nota>=7) && (alunos[i].turma=='A')) { 
 			
-			cout << "\n\nMatricula = " << alunos[i].matricula;
+			cout << "\n\nMatrícula = " << alunos[i].matricula;
 			cout << "\nNota =  " << alunos[i].nota;
 			
 	    }	
 	}
 			
     float mediaTurmaA = somaNotasTurmaA / countTurmaA;
-    cout << "\n\nMedia das notas da turma A: " << mediaTurmaA;
+    cout << "\n\nMédia das notas da turma A: " << mediaTurmaA;
     	
     float mediaTurmaB = somaNotasTurmaB / countTurmaB;
-    cout << "\nMedia das notas da turma B: " << mediaTurmaB;
+    cout << "\nMédia das notas da turma B: " << mediaTurmaB;
         	
 }
